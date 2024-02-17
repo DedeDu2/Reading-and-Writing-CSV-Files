@@ -1,0 +1,15 @@
+import csv
+
+# Writing to CSV file
+data = [['Name', 'Age', 'Country'],
+        ['John', 30, 'USA'],
+        ['Alice', 25, 'UK']]
+with open('data.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+# Reading from CSV file
+with open('data.csv', mode='r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
